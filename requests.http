@@ -1,0 +1,56 @@
+### requisições de exemplo — extensão "REST Client" (humao.rest-client)
+@host = http://localhost:8080
+
+### criar tarefa
+# @name criar
+POST {{host}}/api/tarefas
+Content-Type: application/json
+
+{
+  "nome": "Comprar pão",
+  "descricao": "Padaria da esquina",
+  "status": "PENDENTE",
+  "observacoes": "pela manhã"
+}
+
+### listar todas
+GET {{host}}/api/tarefas
+
+### listar somente as pendentes
+GET {{host}}/api/tarefas?status=PENDENTE
+
+### buscar por id
+GET {{host}}/api/tarefas/1
+
+### alterar a tarefa inteira
+PUT {{host}}/api/tarefas/1
+Content-Type: application/json
+
+{
+  "nome": "Comprar pão e leite",
+  "descricao": "Padaria da esquina",
+  "status": "EM_ANDAMENTO",
+  "observacoes": "levar sacola"
+}
+
+### alterar somente o status
+PATCH {{host}}/api/tarefas/1/status
+Content-Type: application/json
+
+{
+  "status": "CONCLUIDA"
+}
+
+### deletar
+DELETE {{host}}/api/tarefas/1
+
+### erro 400 — nome em branco
+POST {{host}}/api/tarefas
+Content-Type: application/json
+
+{
+  "nome": "   "
+}
+
+### erro 404 — id inexistente
+GET {{host}}/api/tarefas/9999

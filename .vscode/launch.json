@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "projeto-tarefas",
+      "request": "launch",
+      "mainClass": "com.projeto.tarefas.TarefasApplication",
+      "projectName": "tarefas",
+      "env": {
+        "DB_HOST": "localhost",
+        "DB_PORT": "5432",
+        "DB_NAME": "projeto_tarefas",
+        "DB_USER": "postgres",
+        "DB_PASSWORD": "postgres"
+      }
+    }
+  ]
+}
