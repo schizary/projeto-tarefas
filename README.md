@@ -28,8 +28,6 @@ TarefaController  ->  TarefaService (interface)  ->  TarefaRepository
 | Mapper | `TarefaMapper` concentra a conversão entre DTO e entidade |
 | Rich Domain Model | `Tarefa` controla o próprio estado (`alterarDados`, `alterarStatus`, datas) |
 
-Nomes de métodos, variáveis e mensagens em português; nomenclatura clássica de
-framework (pastas, sufixos de classe, anotações) em inglês.
 
 ---
 
